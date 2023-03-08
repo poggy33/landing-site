@@ -159,6 +159,13 @@ const About = () => {
             </Typography>
           </ContainerTextBox>
         </Box>
+        <Box sx={{display:"flex", justifyContent:"center", padding:"30px 0", marginTop:"30px"}}>
+          <Box sx={{border:"1px solid white", padding:"7px 10px 10px 10px", backgroundColor:"white"}}>
+            <Link href="https://github.com/poggy33/cv_certeficates/blob/main/CV_Pohaidak_Full_Stack_React.pdf" target="_blank" underline="none" sx={{color:"black", fontWeight:"bold"}}>View Resume</Link>
+          </Box>
+          
+        </Box>
+        
       </Box>
     </StyledMainBox>
   );

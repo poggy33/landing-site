@@ -19,22 +19,37 @@ const TextTypography = styled(Typography)(() => ({
   color: "#00fff0",
 }));
 
+const StyledMainBox = styled(Box)(() => ({
+  backgroundImage: `linear-gradient(
+    325deg,
+    hsl(185deg 100% 56%) 0%,
+    hsl(185deg 100% 44%) -1%,
+    hsl(186deg 100% 38%) -1%,
+    hsl(187deg 100% 32%) -2%,
+    hsl(188deg 100% 27%) -1%,
+    hsl(190deg 100% 22%) 0%,
+    hsl(194deg 100% 16%) 4%,
+    hsl(198deg 100% 12%) 14%,
+    hsl(0deg 0% 0%) 56%
+      );`,
+}));
+
 export default function Home() {
   const { t } = useTranslation(); //i18n
   return (
-    <Box sx={{ width: "100%", minHeight: "calc(100vh - 134px)" }}>
-      <video className="videoTag" autoPlay loop muted>
+    <StyledMainBox sx={{ width: "100%", minHeight: "calc(100vh - 134px)" }}>
+      {/* <video className="videoTag" autoPlay loop muted>
         <source
           src={require("../assets/backgroundVideo.mp4")}
           type="video/mp4"
         />
-      </video>
+      </video> */}
       <Box
         sx={{
           display: "flex",
           padding: "30px",
           justifyContent: "space-between",
-          margin: "30px 0",
+          margin: "0px 0",
         }}
       >
         <Box sx={{ maxWidth: "730px" }}>
@@ -124,7 +139,7 @@ export default function Home() {
           display: "flex",
           padding: "30px",
           justifyContent: "space-between",
-          marginBottom: "30px",
+          // marginBottom: "30px",
         }}
       >
         <Box sx={{ maxWidth: "730px" }}>
@@ -163,6 +178,6 @@ export default function Home() {
           <img src={require("../assets/imageTitle3.jpg")} alt="SomeImage" />
         </Box>
       </Box>
-    </Box>
+    </StyledMainBox>
   );
 }

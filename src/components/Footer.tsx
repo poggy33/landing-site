@@ -48,7 +48,7 @@ const Footer = () => {
           >
             <SocialLink href="#" target="_blank" color="inherit">
               <InstagramIcon
-                sx={{ fontSize: { lg: 30, md: 30, sm: 25, xs: 20 } }}
+              sx={{ fontSize: 30 }}
               />
             </SocialLink>
           </Tooltip>
@@ -59,7 +59,7 @@ const Footer = () => {
           >
             <TelegramIcon
               sx={{
-                fontSize: { lg: 30, md: 30, sm: 25, xs: 20 },
+                fontSize: 30,
                 margin: "0 20px",
               }}
             />
@@ -70,7 +70,7 @@ const Footer = () => {
             color="inherit"
           >
             <FacebookIcon
-              sx={{ fontSize: { lg: 30, md: 30, sm: 25, xs: 20 } }}
+            sx={{ fontSize: 30 }}
             />
           </SocialLink>
           <SocialLink
@@ -80,7 +80,7 @@ const Footer = () => {
           >
             <LinkedInIcon
               sx={{
-                fontSize: { lg: 30, md: 30, sm: 25, xs: 20 },
+                fontSize: 30,
                 margin: "0 20px",
               }}
             />
@@ -99,11 +99,11 @@ const Footer = () => {
               },
             }}
           >
-          <SocialLink href="#" target="_blank" color="inherit">
-            <TwitterIcon
-              sx={{ fontSize: { lg: 30, md: 30, sm: 25, xs: 20 } }}
-            />
-          </SocialLink>
+            <SocialLink href="#" target="_blank" color="inherit">
+              <TwitterIcon
+              sx={{ fontSize: 30 }}
+              />
+            </SocialLink>
           </Tooltip>
         </Box>
       </Box>

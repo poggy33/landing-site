@@ -16,6 +16,7 @@ const NavButton = styled(Button)(() => ({
     color: "rgb(0,255,240)",
     cursor: "pointer",
   },
+  minWidth:"130px"
 }));
 
 const LanguageButton = styled(Button)(() => ({

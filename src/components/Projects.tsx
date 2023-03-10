@@ -84,7 +84,7 @@ const Projects = () => {
           </Box>
         </Box>
 
-        <Box sx={{ marginTop: "10px" }}>
+        <Box sx={{ marginTop: "10px", minWidth:'300px' }}>
           <TitleTypography
             variant="h2"
             sx={{

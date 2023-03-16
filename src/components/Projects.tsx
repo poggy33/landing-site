@@ -6,6 +6,7 @@ import { Link } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import Filter1Icon from "@mui/icons-material/Filter1";
 import Filter2Icon from "@mui/icons-material/Filter2";
+import Filter3Icon from "@mui/icons-material/Filter3";
 import { useTranslation } from "react-i18next";//i18n
 
 const StyledMainBox = styled(Box)(() => ({
@@ -113,7 +114,8 @@ const Projects = () => {
       </StyledTitleBox>
 
       <Box sx={{ margin: "50px 50px 0 50px" }}>
-        <Box
+
+      <Box
           sx={{
             borderBottom: "1px solid #00fff0",
             paddingBottom: "15px",
@@ -122,6 +124,52 @@ const Projects = () => {
         >
           <Box sx={{ display: "flex", marginBottom: "20px" }}>
             <Filter1Icon sx={{ fontSize: 30 }} />
+            <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
+              03/2023
+            </Typography>
+          </Box>
+          <Typography
+            variant="h6"
+            sx={{
+              marginBottom: "5px",
+              fontSize: {
+                lg: 20,
+                md: 20,
+                sm: 18,
+                xs: 14,
+              },
+            }}
+          >
+            React, React-router-dom, Mui, Firebase Google Auth, Firestore database, TypeScript 
+          </Typography>
+          <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
+            (social app)
+          </Typography>
+          <Link
+            href="https://social-app-firebase.vercel.app/"
+            target="_blank"
+            sx={{ color: "#00fff0", marginRight: "20px" }}
+          >
+            {t("app")}
+          </Link>
+          <Link
+            href="https://github.com/poggy33/social-app-firebase"
+            target="_blank"
+            sx={{ color: "#00fff0" }}
+          >
+            {t("source")}
+          </Link>
+        </Box>
+
+        <Box
+          sx={{
+            borderBottom: "1px solid #00fff0",
+            paddingBottom: "15px",
+            marginTop: "30px",
+          }}
+        >
+          <Box sx={{ display: "flex", marginBottom: "20px" }}>
+            <Filter2Icon sx={{ fontSize: 30 }} />
             <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
               01/2023
             </Typography>
@@ -167,7 +215,7 @@ const Projects = () => {
           }}
         >
           <Box sx={{ display: "flex", marginBottom: "20px" }}>
-            <Filter2Icon sx={{ fontSize: 30 }} />
+            <Filter3Icon sx={{ fontSize: 30 }} />
             <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
               11/2022
             </Typography>
@@ -187,7 +235,7 @@ const Projects = () => {
             React, React-router-dom, Mui, Firebase
           </Typography>
           <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-            (e commerce app)
+            (e-commerce app)
           </Typography>
           <Link
             href="https://watches-shop33.vercel.app/"

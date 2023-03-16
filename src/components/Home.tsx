@@ -38,12 +38,6 @@ export default function Home() {
   const { t } = useTranslation(); //i18n
   return (
     <StyledMainBox sx={{ width: "100%", minHeight: "calc(100vh - 134px)" }}>
-      {/* <video className="videoTag" autoPlay loop muted>
-        <source
-          src={require("../assets/backgroundVideo.mp4")}
-          type="video/mp4"
-        />
-      </video> */}
       <Box
         sx={{
           display: "flex",

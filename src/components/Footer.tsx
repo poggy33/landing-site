@@ -26,7 +26,6 @@ const Footer = () => {
         width: "100%",
         backgroundColor: "black",
         borderTop: "1px solid white",
-
         color: "white",
       }}
     >

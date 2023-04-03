@@ -146,7 +146,15 @@ const Projects = () => {
               Postgres, Cloudinary, Stripe )
             </Typography>
             <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-              (e-commerce app with cart, Stripe payment, server has deployed on Heroku "https://github.com/poggy33/strapi-server" )
+              (e-commerce app with cart, Stripe payment, server has deployed on{" "}
+              <Link
+                sx={{ color: "#00fff0" }}
+                href="https://watches-shop-server.herokuapp.com"
+                target="_blank"
+              >
+                Heroku
+              </Link>{" "}
+              "https://github.com/poggy33/strapi-server" )
             </Typography>
             <Link
               href="https://strapi-client-ecommerce.vercel.app/"

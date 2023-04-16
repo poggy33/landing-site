@@ -200,6 +200,7 @@ const Projects = () => {
           urlWeb="https://social-app-firebase.vercel.app/"
           urlGitHub="https://github.com/poggy33/social-app-firebase"
           projectNumber={<Filter3Icon sx={{ fontSize: 30 }} />}
+          additionalDesc="(firebase social app)"
         />
         <ItemProject
           date="01/2023"

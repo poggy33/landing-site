@@ -8,6 +8,8 @@ import Filter1Icon from "@mui/icons-material/Filter1";
 import Filter2Icon from "@mui/icons-material/Filter2";
 import Filter3Icon from "@mui/icons-material/Filter3";
 import Filter4Icon from "@mui/icons-material/Filter4";
+import Filter5Icon from "@mui/icons-material/Filter5";
+
 import { useTranslation } from "react-i18next"; //i18n
 
 const StyledMainBox = styled(Box)(() => ({
@@ -50,6 +52,67 @@ const TitleTypography = styled(Typography)(() => ({
   WebkitTextFillColor: "transparent",
   fontWeight: "bold",
 }));
+
+interface ItemProjectProps {
+  date?: string;
+  desc?: string;
+  additionalDesc?: string;
+  urlWeb?: string;
+  urlGitHub?: string;
+  projectNumber?: React.ReactNode;
+}
+
+const ItemProject = (data: ItemProjectProps) => {
+  const { t } = useTranslation(); //i18n
+  return (
+    <>
+      <Box
+        sx={{
+          borderBottom: "1px solid #00fff0",
+          paddingBottom: "15px",
+          marginTop: "30px",
+        }}
+      >
+        <Box sx={{ display: "flex", marginBottom: "20px" }}>
+          {data.projectNumber}
+          <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
+            {data.date}
+          </Typography>
+        </Box>
+        <Typography
+          variant="h6"
+          sx={{
+            marginBottom: "5px",
+            fontSize: {
+              lg: 20,
+              md: 20,
+              sm: 18,
+              xs: 14,
+            },
+          }}
+        >
+          {data.desc}
+        </Typography>
+        {data.additionalDesc ? (
+          <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
+            {data.additionalDesc}
+          </Typography>
+        ) : null}
+
+        <Link
+          href={data.urlWeb}
+          target="_blank"
+          sx={{ color: "#00fff0", marginRight: "20px" }}
+        >
+          {t("app")}
+        </Link>
+        <Link href={data.urlGitHub} target="_blank" sx={{ color: "#00fff0" }}>
+          {t("source")}
+        </Link>
+      </Box>
+    </>
+  );
+};
 
 const Projects = () => {
   const { t } = useTranslation(); //i18n
@@ -115,202 +178,45 @@ const Projects = () => {
       </StyledTitleBox>
 
       <Box sx={{ margin: "50px 50px 0 50px" }}>
-        <>
-          <Box
-            sx={{
-              borderBottom: "1px solid #00fff0",
-              paddingBottom: "15px",
-              marginTop: "30px",
-            }}
-          >
-            <Box sx={{ display: "flex", marginBottom: "20px" }}>
-              <Filter1Icon sx={{ fontSize: 30 }} />
-              <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
-                04/2023
-              </Typography>
-            </Box>
-            <Typography
-              variant="h6"
-              sx={{
-                marginBottom: "5px",
-                fontSize: {
-                  lg: 20,
-                  md: 20,
-                  sm: 18,
-                  xs: 14,
-                },
-              }}
-            >
-              UI(React, React-router-dom, Mui, React-redux, Reduxjs/toolkit,
-              Formik, Yup, React-responsive-carousel), API(Strapi, Heroku
-              Postgres, Cloudinary, Stripe )
-            </Typography>
-            <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-              (e-commerce app with cart, Stripe payment, server has deployed on{" "}
-              <Link
-                sx={{ color: "#00fff0" }}
-                href="https://watches-shop-server.herokuapp.com"
-                target="_blank"
-              >
-                Heroku
-              </Link>{" "}
-              "https://github.com/poggy33/strapi-server" )
-            </Typography>
-            <Link
-              href="https://strapi-client-ecommerce.vercel.app/"
-              target="_blank"
-              sx={{ color: "#00fff0", marginRight: "20px" }}
-            >
-              {t("app")}
-            </Link>
-            <Link
-              href="https://github.com/poggy33/strapi-client"
-              target="_blank"
-              sx={{ color: "#00fff0" }}
-            >
-              {t("source")}
-            </Link>
-          </Box>
-        </>
-
-        <Box
-          sx={{
-            borderBottom: "1px solid #00fff0",
-            paddingBottom: "15px",
-            marginTop: "30px",
-          }}
-        >
-          <Box sx={{ display: "flex", marginBottom: "20px" }}>
-            <Filter2Icon sx={{ fontSize: 30 }} />
-            <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
-              03/2023
-            </Typography>
-          </Box>
-          <Typography
-            variant="h6"
-            sx={{
-              marginBottom: "5px",
-              fontSize: {
-                lg: 20,
-                md: 20,
-                sm: 18,
-                xs: 14,
-              },
-            }}
-          >
-            React, React-router-dom, Mui, Firebase Google Auth, Firestore
-            database, TypeScript
-          </Typography>
-          <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-            (social app)
-          </Typography>
-          <Link
-            href="https://social-app-firebase.vercel.app/"
-            target="_blank"
-            sx={{ color: "#00fff0", marginRight: "20px" }}
-          >
-            {t("app")}
-          </Link>
-          <Link
-            href="https://github.com/poggy33/social-app-firebase"
-            target="_blank"
-            sx={{ color: "#00fff0" }}
-          >
-            {t("source")}
-          </Link>
-        </Box>
-
-        <Box
-          sx={{
-            borderBottom: "1px solid #00fff0",
-            paddingBottom: "15px",
-            marginTop: "30px",
-          }}
-        >
-          <Box sx={{ display: "flex", marginBottom: "20px" }}>
-            <Filter3Icon sx={{ fontSize: 30 }} />
-            <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
-              01/2023
-            </Typography>
-          </Box>
-          <Typography
-            variant="h6"
-            sx={{
-              marginBottom: "5px",
-              fontSize: {
-                lg: 20,
-                md: 20,
-                sm: 18,
-                xs: 14,
-              },
-            }}
-          >
-            React, React-router-dom, Mui, React-redux, Reduxjs/toolkit, Axios,
-            React-i18next, TypeScript
-          </Typography>
-          <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-            (username:admin, password:12345)
-          </Typography>
-          <Link
-            href="https://poggy33.github.io/react-ts/"
-            target="_blank"
-            sx={{ color: "#00fff0", marginRight: "20px" }}
-          >
-            {t("app")}
-          </Link>
-          <Link
-            href="https://github.com/poggy33/react-ts"
-            target="_blank"
-            sx={{ color: "#00fff0" }}
-          >
-            {t("source")}
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            borderBottom: "1px solid #00fff0",
-            paddingBottom: "15px",
-            marginTop: "30px",
-          }}
-        >
-          <Box sx={{ display: "flex", marginBottom: "20px" }}>
-            <Filter4Icon sx={{ fontSize: 30 }} />
-            <Typography sx={{ marginLeft: "20px", fontSize: 20 }}>
-              11/2022
-            </Typography>
-          </Box>
-          <Typography
-            variant="h6"
-            sx={{
-              marginBottom: "5px",
-              fontSize: {
-                lg: 20,
-                md: 20,
-                sm: 18,
-                xs: 14,
-              },
-            }}
-          >
-            React, React-router-dom, Mui, Firebase
-          </Typography>
-          <Typography sx={{ marginBottom: "5px", fontSize: "14px" }}>
-            (e-commerce app)
-          </Typography>
-          <Link
-            href="https://watches-shop33.vercel.app/"
-            target="_blank"
-            sx={{ color: "#00fff0", marginRight: "20px" }}
-          >
-            {t("app")}
-          </Link>
-          <Link
-            href="https://github.com/poggy33/watches-shop33"
-            target="_blank"
-            sx={{ color: "#00fff0" }}
-          >
-            {t("source")}
-          </Link>
-        </Box>
+        <ItemProject
+          date="05/2023"
+          desc="React, TypeScript, Tailwind, Next.js, Prisma, MongoDB, NextAuth & Vercel"
+          urlWeb="https://deploy-messenger.vercel.app/"
+          urlGitHub="https://github.com/poggy33/deploy-messenger"
+          projectNumber={<Filter1Icon sx={{ fontSize: 30 }} />}
+          additionalDesc='(messenger app)'
+        />
+        <ItemProject
+          date="04/2023"
+          desc="UI(React, React-router-dom, Mui, React-redux, Reduxjs/toolkit, Formik, Yup, React-responsive-carousel), API(Strapi, Heroku Postgres, Cloudinary, Stripe )"
+          urlWeb="https://strapi-client-ecommerce.vercel.app/"
+          urlGitHub="https://github.com/poggy33/strapi-client"
+          projectNumber={<Filter2Icon sx={{ fontSize: 30 }} />}
+          additionalDesc='(e-commerce app with cart, Stripe payment, server has deployed on "https://watches-shop-server.herokuapp.com")'
+        />
+        <ItemProject
+          date="03/2023"
+          desc="React, React-router-dom, Mui, Firebase Google Auth, Firestore database, TypeScript"
+          urlWeb="https://social-app-firebase.vercel.app/"
+          urlGitHub="https://github.com/poggy33/social-app-firebase"
+          projectNumber={<Filter3Icon sx={{ fontSize: 30 }} />}
+        />
+        <ItemProject
+          date="01/2023"
+          desc="React, React-router-dom, Mui, React-redux, Reduxjs/toolkit, Axios, React-i18next, TypeScript"
+          urlWeb="https://poggy33.github.io/react-ts/"
+          urlGitHub="https://github.com/poggy33/react-ts"
+          projectNumber={<Filter4Icon sx={{ fontSize: 30 }} />}
+          additionalDesc="(username:admin, password:12345)"
+        />
+        <ItemProject
+          date="11/2022"
+          desc="React, React-router-dom, Mui, Firebase"
+          urlWeb="https://watches-shop33.vercel.app/"
+          urlGitHub="https://github.com/poggy33/watches-shop33"
+          projectNumber={<Filter5Icon sx={{ fontSize: 30 }} />}
+          additionalDesc="(e-commerce app)"
+        />
       </Box>
     </StyledMainBox>
   );

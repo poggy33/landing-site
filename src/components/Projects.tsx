@@ -184,7 +184,7 @@ const Projects = () => {
           urlWeb="https://deploy-messenger.vercel.app/"
           urlGitHub="https://github.com/poggy33/deploy-messenger"
           projectNumber={<Filter1Icon sx={{ fontSize: 30 }} />}
-          additionalDesc='(messenger app)'
+          additionalDesc="(messenger app)"
         />
         <ItemProject
           date="04/2023"
@@ -192,7 +192,7 @@ const Projects = () => {
           urlWeb="https://strapi-client-ecommerce.vercel.app/"
           urlGitHub="https://github.com/poggy33/strapi-client"
           projectNumber={<Filter2Icon sx={{ fontSize: 30 }} />}
-          additionalDesc='(e-commerce app with Stripe payment, default card number - 4242 4242 4242 4242, server has deployed on "https://watches-shop-server.herokuapp.com")'
+          additionalDesc='(e-commerce app with Stripe payment, default card number - 4242 4242 4242 4242, server has deployed on "https://watches-shop-server.herokuapp.com" P.S.!!!!!Server has been down since August - not payment)!!!!!)'
         />
         <ItemProject
           date="03/2023"

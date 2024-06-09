@@ -73,7 +73,7 @@ const Footer = () => {
             />
           </SocialLink>
           <SocialLink
-            href="https://www.linkedin.com/in/ihor-pohaidak-a13906227/"
+            href="https://www.linkedin.com/in/ihor-pohaidak-313845312"
             target="_blank"
             color="inherit"
           >
